@@ -1,0 +1,81 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+/* styling the header*/
+header{
+    background-color: rgb(56, 53, 54);
+    min-height: 70px;
+    border-bottom:3px solid #168f12 ;
+}
+
+/* styling the logo*/
+.logo{
+    float: left;
+}
+
+.logo h1{
+    font-size: 65px;
+    color: whitesmoke;
+}
+.highlight{
+  color: #168f12;
+  font-weight: bold;
+}
+
+/* styling the menu*/
+.menu {
+    margin-top: 20px;
+    padding: 0%;
+    list-style: none;
+    float: right;
+}
+
+.menu li{
+    margin: 0%;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
+.menu li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:white;
+    text-decoration: none;
+}
+
+.menu li.active {
+    border: 1px solid white;
+}
+
+/* styling the body*/
+body{
+    background-image: url('../img/backimage.jpg');
+    background-size: cover;
+}
+
+/* styling the inputs */
+
+.inputs{
+    width: 100px;
+    margin: auto;
+}
+
+#username, #firstname{
+   width: 250%;
+   height: 30px;
+}
+
+
+
+
+
+
+
