@@ -18,8 +18,5 @@ function registerUser(){
 
 var form = document.querySelector('#regForm');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault()
-    registerUser()
-} )
+form.addEventListener('submit',(e)=> {e.preventDefault() , registerUser()} )
 
