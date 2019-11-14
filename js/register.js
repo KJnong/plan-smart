@@ -9,9 +9,9 @@ function registerUser(){
 
     console.log(user)
 
-    let http = new XMLHttpRequest();
-    http.open("POST", "https://localhost:44301/api/values" , true)
-    http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    let http = new XMLHttpRequest();  //creating http object
+    http.open("POST", "https://localhost:44301/api/values" , true)   //opening connection
+    http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
     http.onload = () =>{
         if( http.status == 200)
