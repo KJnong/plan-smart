@@ -13,7 +13,7 @@
 header{
     background-color: rgb(56, 53, 54);
     min-height: 70px;
-    border-bottom:3px solid #168f12 ;
+    border-bottom:3px solid #c74949 ;
 }
 
 /* styling the logo*/
@@ -26,7 +26,7 @@ header{
     color: whitesmoke;
 }
 .highlight{
-  color: #168f12;
+  color: #8f1212;
   font-weight: bold;
 }
 
@@ -72,6 +72,11 @@ body{
    width: 250%;
    height: 30px;
 }*/
+
+
+/* styling login.html*/
+
+
 
 
 

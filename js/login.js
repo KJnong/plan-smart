@@ -23,6 +23,6 @@ function loginUser(){
 
     http.send(JSON.stringify(userLogin))   
 }
-var form = document.querySelector('#regForm');
+var form = document.querySelector('#loginForm');
 
 form.addEventListener('submit',(e)=> {e.preventDefault() , loginUser()} )
