@@ -11,9 +11,9 @@
 }
 /* styling the header*/
 header{
-    background-color: rgb(56, 53, 54);
+    background-color: rgb(58, 58, 58);
     min-height: 70px;
-    border-bottom:3px solid #c74949 ;
+    border-bottom:1px solid #d16500 ;
 }
 
 /* styling the logo*/
@@ -26,7 +26,7 @@ header{
     color: whitesmoke;
 }
 .highlight{
-  color: #8f1212;
+  color: #e215159f;
   font-weight: bold;
 }
 
@@ -57,24 +57,31 @@ header{
 
 /* styling the body*/
 body{
-    background-image: url('../img/backimage.jpg');
+    background: rgba(88, 84, 84, 0.65) url('../img/today (2).jpg');
+    background-blend-mode: darken;
     background-size: cover;
+    
 }
+
 
 /* styling the inputs */
 
 .inputs{
     width: 100px;
     margin: auto;
+    color:white;
+    
+}
+.inputs h1{
+    border-bottom: 2px solid rgb(94, 0, 0);
+    margin-bottom: 5px;
 }
 
-/*#username, #firstname{
-   width: 250%;
-   height: 30px;
-}*/
-
-
-/* styling login.html*/
+/* styling the table*/
+#table{
+    background-color: white;
+    width: 50%;
+}
 
 
 

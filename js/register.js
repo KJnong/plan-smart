@@ -7,7 +7,6 @@ function registerUser(){
     user.username = document.getElementById('username').value
     user.password = document.getElementById('password').value
 
-    console.log(user)
 
     let http = new XMLHttpRequest();  //creating http object
     http.open("POST", "https://localhost:44301/api/values" , true)   //opening connection

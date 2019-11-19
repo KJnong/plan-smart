@@ -11,14 +11,11 @@ function loginUser(){
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
     http.onload = () =>{
-        if( http.status == 200)
-            if(http.responseText == "true"){
-                window.location.href = "http://localhost/plan-smart/todo.html"
-            }else
-            console.log('wrong password or userName')
+        if( http.status == 200){
+            window.location.href = "http://localhost/plan-smart/todo.html"}
 
         else if(http.status == 404)
-             console.log(http.responseText);
+        alert("Wrong usrname or password")
     }
 
     http.send(JSON.stringify(userLogin))   
