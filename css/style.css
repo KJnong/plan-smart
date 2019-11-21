@@ -80,8 +80,32 @@ body{
 /* styling the table*/
 #table{
     background-color: white;
-    width: 50%;
+    border-collapse: collapse;
+    margin: 30px opx;
+    font-size: 0.9em;
+    min-width: 1200px;
+    text-align: left;
 }
+
+#table thead th{
+    background-color: rgb(77, 77, 77);
+    color: gainsboro;
+}
+
+#table thead#thead2  th{
+    background-color: rgb(49, 49, 49);
+    color: gainsboro;
+    text-align: left;
+    font-weight: bold;
+}
+#table td{
+    background-color: rgb(77, 77, 77);
+    color: gainsboro;
+    font-style: italic;
+    padding: 12px 15x;    
+    margin: 50px;
+}
+  
 
 
 

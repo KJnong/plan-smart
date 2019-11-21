@@ -21,16 +21,53 @@
     </div>
     </header>
 
-    <table id="table">
-      <thead>
-        <th>Date</th>
-        <th>Commitment</th>
-        <th>Done</th>
-      </thead>
-      <tbody>
-          
-      </tbody>
-    </table>
+    <div class="container">
+        <form id="insertForm">
+            <div class="inputs">
+                <h1>Insert Plan<h1>
+            </div>
+
+            <table id="table">
+               
+                <thead>
+                  <th><h1>Date</h1></th>
+                  <th><h1>Commitment</h1></th>
+                  <th><h1>Done</h1></th>
+                </thead>
+                 <thead id="thead2">
+                  <th><div class="inputs" id="nameInput">
+                    <label name="date" for="date"><h3> Date: </h3></label>
+                    <input type="date" name="date" id="date" required>
+                </div></th>
+                  <th><div class="inputs" id="lastnameInput">
+                    <label name="Commitment" for="commitment"><h3> Plan:</h3></label>
+                    <textarea id="commitment" required></textarea> > </textarea>
+                </div></th>
+                  <th> <div class="inputs">
+                    <button id="sendCommit" type="submit">Commit</button>
+                </div></th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+              </table>
+
+
+
+            
+
+            
+            
+
+           
+
+            
+
+        </form>
+    </div>
+
+
+    
 
     <script src="js/todo.js"> </script>
   </body>

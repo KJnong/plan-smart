@@ -4,15 +4,23 @@ function loginUser(){
     userLogin.username = document.getElementById('username').value
     userLogin.password = document.getElementById('password').value
 
-    console.log(userLogin)
-
     let http = new XMLHttpRequest();  //creating http object
     http.open("POST", "https://localhost:44301/api/login" , true)   //opening connection
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
     http.onload = () =>{
         if( http.status == 200){
-            window.location.href = "http://localhost/plan-smart/todo.html"}
+
+            const response = JSON.parse(http.responseText);
+            var idValue = response.id;
+            localStorage.setItem("idValue" , idValue)
+            window.location.href = "http://localhost/plan-smart/todo.html";
+
+        
+    
+        }
+            
+            
 
         else if(http.status == 404)
         alert("Wrong usrname or password")
