@@ -32,7 +32,7 @@ function populateTable(toDo) {
         var cell1 = tableRow.insertCell(0)
         var cell2 = tableRow.insertCell(1)
         var cell3 = tableRow.insertCell(2)
-        cell1.innerHTML = row.date;
+        cell1.innerHTML = moment(row.date).fromNow()
         cell2.innerHTML = row.commitment,
         cell3.innerHTML = "<button id = 'delete' type='click'>Done<button/>"
 
