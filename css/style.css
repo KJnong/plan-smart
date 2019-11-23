@@ -105,6 +105,21 @@ body{
     padding: 25x;    
  
 }
+#insert{
+    background-color: white;
+    border-collapse: collapse;
+    margin: 30px opx;
+    font-size: 0.9em;
+    min-width: 1200px;
+    text-align: left;
+}
+#thead2  th{
+    background-color: rgb(49, 49, 49);
+    color: gainsboro;
+    text-align: left;
+    font-weight: bold;
+
+
   
 
 
