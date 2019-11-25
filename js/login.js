@@ -1,5 +1,5 @@
-function loginUser(){
-    
+function loginUser()
+{
     let userLogin ={};
     userLogin.username = document.getElementById('username').value
     userLogin.password = document.getElementById('password').value
@@ -8,22 +8,17 @@ function loginUser(){
     http.open("POST", "https://localhost:44301/api/login" , true)   //opening connection
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
-    http.onload = () =>{
-        if( http.status == 200){
-
+    http.onload = () =>
+    {
+        if( http.status == 200)
+        {
             const response = JSON.parse(http.responseText);
             var idValue = response.id;
             localStorage.setItem("idValue" , idValue)
             window.location.href = "http://localhost/plan-smart/todo.html";
-
-        
-    
         }
-            
-            
-
         else if(http.status == 404)
-        alert("Wrong usrname or password")
+             alert("Wrong usrname or password")
     }
 
     http.send(JSON.stringify(userLogin))   

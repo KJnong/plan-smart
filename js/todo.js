@@ -1,4 +1,5 @@
-function retrieveItems() {
+function retrieveItems()
+{
     let user = {};
     user.id = localStorage.getItem("idValue");
 
@@ -6,24 +7,24 @@ function retrieveItems() {
     http.open("POST", "https://localhost:44301/api/Items", true)   //opening connection
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
-    http.onload = () => {
-        if (http.status == 200) {
-
-            let toDo = JSON.parse(http.responseText)
-            populateTable(toDo)
-            
-        }
+    http.onload = () =>
+    {
+        if (http.status == 200)
+            {
+                let toDo = JSON.parse(http.responseText)
+                populateTable(toDo)  
+            }
 
         else if (http.status == 404)
             alert("Wrong usrname or password")
 
     }
-
     http.send(JSON.stringify(user))
 }
 
 
-function populateTable(toDo) {
+function populateTable(toDo)
+{
     const table = document.querySelector("#table");
 
      toDo.forEach((row) => 
@@ -34,7 +35,7 @@ function populateTable(toDo) {
         var cell3 = tableRow.insertCell(2)
         cell1.innerHTML = moment(row.date).fromNow()
         cell2.innerHTML = row.commitment,
-        cell3.innerHTML = "<button id = 'delete' type='click'>Done<button/>"
+        cell3.innerHTML = "<button id = 'delete' type='click' onclick = 'deleteItem("+row.id+")'>Done<button/>"
 
      });
 
@@ -42,14 +43,12 @@ function populateTable(toDo) {
      /*console.log('this is the first element: ', toDo[0]);
      const one = toDo.find(t => t.item_id === 1);
      console.log(one);*/
- 
-
-
 }
 document.addEventListener("DOMContentLoaded", retrieveItems());
 
 
-function InsertTodo(){
+function InsertTodo()
+{
 
     let insert ={};
     insert.date = document.getElementById('date').value
@@ -62,9 +61,14 @@ function InsertTodo(){
     http.open("POST", "https://localhost:44301/api/Insert" , true)   //opening connection
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
-    http.onload = () =>{
+    http.onload = () =>
+    {
         if( http.status == 200)
-            console.log("Sent");
+        {
+            alert("Refresh page")
+            console.log('hello world')
+        }    
+
 
         else if(http.status == 404)
              console.log(http.responseText);
@@ -75,3 +79,32 @@ function InsertTodo(){
 var form = document.querySelector('#insertForm');
 
 form.addEventListener('submit',(e)=> {e.preventDefault() , InsertTodo()} )
+
+function deleteItem(id)
+{
+    
+
+    let http = new XMLHttpRequest();  //creating http object
+    http.open("DELETE", "https://localhost:44301/api/Insert/"+id, true)   //opening connection
+    http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
+    http.send()
+    http.onload = () =>
+    {
+        if( http.status == 200)
+        {
+            deleteTableRows()
+            retrieveItems()
+        }
+
+        else if(http.status == 404)
+             console.log(http.responseText);
+    }
+    
+}
+function deleteTableRows(){
+    const table = document.querySelector("#table");
+    for(var i = table.rows.length - 1; i > 0; i--)
+    {
+        table.deleteRow(i);
+    }
+}
