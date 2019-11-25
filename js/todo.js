@@ -65,8 +65,8 @@ function InsertTodo()
     {
         if( http.status == 200)
         {
-            alert("Refresh page")
-            console.log('hello world')
+            console.log(inserted);
+            
         }    
 
 
@@ -76,35 +76,26 @@ function InsertTodo()
 
     http.send(JSON.stringify(insert))
 }
-var form = document.querySelector('#insertForm');
 
-form.addEventListener('submit',(e)=> {e.preventDefault() , InsertTodo()} )
+var form = document.querySelector('#insertForm');
+form.addEventListener('submit',(e)=> {e.preventDefault() , InsertTodo(), deleteTableRows()} )
 
 function deleteItem(id)
 {
-    
-
     let http = new XMLHttpRequest();  //creating http object
     http.open("DELETE", "https://localhost:44301/api/Insert/"+id, true)   //opening connection
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
     http.send()
     http.onload = () =>
-    {
-        if( http.status == 200)
-        {
-            deleteTableRows()
-            retrieveItems()
-        }
-
-        else if(http.status == 404)
-             console.log(http.responseText);
-    }
-    
+    deleteTableRows()
 }
-function deleteTableRows(){
+
+function deleteTableRows()
+{
     const table = document.querySelector("#table");
     for(var i = table.rows.length - 1; i > 0; i--)
     {
         table.deleteRow(i);
     }
+    document.addEventListener("DOMContentLoaded", retrieveItems());
 }
