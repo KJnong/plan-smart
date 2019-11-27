@@ -13,8 +13,10 @@ function registerUser(){
     http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  // content type (meta data)
 
     http.onload = () =>{
-        if( http.status == 200)
-            console.log(http.responseText);
+        if( http.status == 200){
+            
+            
+        }
 
         else if(http.status == 404)
              console.log(http.responseText);

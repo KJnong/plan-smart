@@ -15,6 +15,8 @@ function loginUser()
             const response = JSON.parse(http.responseText);
             var idValue = response.id;
             localStorage.setItem("idValue" , idValue)
+            let name = response.name;
+            localStorage.setItem('userName', name)
             window.location.href = "http://localhost/plan-smart/todo.html";
         }
         else if(http.status == 404)

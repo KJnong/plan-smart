@@ -62,7 +62,10 @@ body{
     background-size: cover;
     
 }
-
+#welcomeName{
+    font-style: oblique;
+    color: aliceblue;
+}
 
 /* styling the inputs */
 
@@ -72,9 +75,9 @@ body{
     color:white;
     
 }
-.inputs h1{
-    border-bottom: 2px solid rgb(94, 0, 0);
-    margin-bottom: 5px;
+#inputLogo{
+    text-align: center;
+    color: antiquewhite;
 }
 
 /* styling the table*/
@@ -118,6 +121,24 @@ body{
     color: gainsboro;
     text-align: left;
     font-weight: bold;
+}
+input,textarea
+{
+    background: transparent;
+    border-radius: 5px;
+    border-width:1px;
+    border-color: rgb(41, 10, 10); 
+    color: rgb(184, 175, 175);
+}
+.inputs h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(36, 34, 34);
+}
+label{
+    font-style: oblique;
+    font-size: 18px;
+}
+
 
 
   

@@ -1,3 +1,5 @@
+document.querySelector('#welcomeName').innerHTML = '<h1>Welcome '+localStorage.getItem('userName')+'</h1>';
+
 function retrieveItems()
 {
     let user = {};
