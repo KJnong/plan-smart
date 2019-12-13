@@ -138,8 +138,22 @@ label{
     font-style: oblique;
     font-size: 18px;
 }
-
-
+tr.grid-view td input{
+    border: none;
+    width: 100%;
+}
+tr.grid-edit td input{
+    border: 1px solid;
+    width: 100%;
+}
+tr.grid-view td .btn-update
+{
+    display: none;
+}
+tr.grid-edit td .btn-edit
+{
+    display: none;
+}
 
   
 
